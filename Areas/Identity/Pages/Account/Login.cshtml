@@ -1,0 +1,143 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+<head>
+    <style>
+                .row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin: 60px 0px;
+                }
+
+                .col-md-4 {
+                    border-color: black;
+                    border-radius: 10px;
+                    background-color: #f7f6f6;
+                    box-shadow: rgba(208,245,254,0.9) 1px 1px 10px 10px;
+                    width: 40rem;
+                }
+
+                .login-form-title2 {
+                    background: linear-gradient(270deg, #0c91cb, #94d8f5);
+                    max-width: 50rem;
+                    height: 6rem;
+                    border-radius: 10px;
+                    text-align: center;
+                    padding-top: 28px;
+                    text-shadow: 0.1em 0.1em 0.2em black;
+                    font-family: 'Maiandra GD';
+                }
+
+                .flex-register {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+
+                .form-floating {
+                    font-size: 1.2rem;
+                    font-family: 'Maiandra GD';
+                    padding: 15px;
+                    justify-content: space-between;
+                    margin: 5px;
+                }
+
+                    .form-floating label {
+                        color: #29aae2;
+                        font-weight: 500;
+                    }
+
+                .form-control {
+                    max-height: 20px;
+                    max-width: 600px;
+                }
+
+                .label {
+                    color: #29aae2;
+                }
+
+                .input2 {
+                    border-color: #29aae2;
+                    width: 300px;
+                }
+
+                #login-submit {
+                    padding: 5px 0px;
+                    align-content: flex-end;
+                    background: #29aae2;
+                    border-color: #29aae2;
+                    border-radius: 20px;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    color: white;
+                    max-width: 200px;
+                }
+
+                .checkbox{
+                    color: #29aae2;
+                    font-weight: 500;
+                }
+                .links{
+
+                    color: #29aae2;
+                    font-weight: 500;
+                    margin-left: 450px;
+                }
+                .links a {
+                    text-decoration: none;
+                }
+
+    </style>
+</head>
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                <div class="login-form-title2 text-white">
+                    <h2>Влизане с акаунт</h2>
+                </div>
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="flex-register">
+                    <div class="form-floating">
+                        <span><label> Потребителско име </label></span>
+                        <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true" />
+                        <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating">
+                        <span><label> Парола </label></span>
+                        <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="checkbox">
+                        <label asp-for="Input.RememberMe" class="form-label">
+                            <input class="form-check-input" asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Влизане</button>
+                </div>
+                <div class="links">
+                    <p>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Забравена парола</a>
+                    </p>
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Регистрация</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

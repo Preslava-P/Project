@@ -1,0 +1,73 @@
+﻿.home-page{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    min-height: 40rem;
+    margin:50px 20px 0 20px;
+}
+
+
+.h-ki {
+    align-items: center;
+    background: #9fcdff;
+    border: hidden;
+    border-radius: 40px;
+    margin: 6px;
+    padding: 5px;
+    max-width: 200px;
+    min-height: 220px;
+    color: #5284ff;
+    opacity: 0.9;
+}
+
+    .h-ki h5 {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 10px;
+        text-decoration: underline;
+    }
+
+    .h-ki .p {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+.slides {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+    min-height: 500px;
+    background: #5284ff;
+    border: hidden;
+    border-radius: 30px;
+    opacity: 0.9;
+    margin:0;
+}
+    .text-slide h3{
+        font-size: 1.2rem;
+        text-align: center;
+        color: #9fcdff;
+        margin: 10px 30px 20px 30px;
+    }
+.text-slide p {
+    font-size: 1rem;
+    text-align: justify;
+    color: #9fcdff;
+    font-weight: 500;
+    margin: 0px 30px 30px 30px;
+
+}
+.image img{
+    width: 250px;
+    height: 200px;
+}
+

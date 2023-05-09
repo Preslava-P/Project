@@ -1,0 +1,59 @@
+.container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100%;
+}
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("../Pictures/font-home.jpg") center / cover no-repeat fixed;
+}
+
+.navbar {
+    display: inline;
+    flex-direction: row;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    background-color: #25326e;
+    margin-bottom: 20px;
+    margin: 0;
+    padding: 15px;
+    height: 60px;
+}
+.container-fluid img {
+    width: 30px;
+    height: 30px;
+}
+
+.container-fluid span {
+    color: white;
+    font-family: Magneto;
+    margin-right: 30px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.navbar-nav{
+    font-weight:bold;
+}
+.nav-item:hover {
+    font-weight: 800;
+    transition: 0.2s;
+}

@@ -1,0 +1,95 @@
+﻿body {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url("../Pictures/font_contacts.jpg") center / cover no-repeat fixed;
+}
+
+.contact-left {
+    border: dotted;
+    border-color: #5284ff;
+    border-radius: 30px;
+    max-width: 22rem;
+    margin: 70px 50px 0 90px;
+    padding: 20px;
+}
+
+.labels {
+    color: #5284ff;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-control {
+    background-color: #5284ff;
+    width: 300px;
+}
+
+.button {
+    border: hidden;
+    border-radius: 5px;
+    background: #5284ff;
+    color: #9fcdff;
+    margin-top: 30px;
+    max-width: 90px;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: center;
+    margin-right: 50px;
+}
+
+.developers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 70px;
+}
+#text{
+    margin: 0 50px 30px 50px;    
+    
+}
+    #text h4 {
+        color: #5284ff;
+        text-align: center;
+        letter-spacing: 5px;
+        text-shadow: 2px 2px #494949;
+    }
+    #text h6 {
+        color: #004aff;
+        text-align: justify;
+        letter-spacing: 2px;
+    }
+.our-developers{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row;
+}
+#developer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    background: #5284ff;
+    color: #9fcdff;
+    text-align: center;
+    border: hidden;
+    border-radius: 20px;
+    height: 15rem;
+    width: 30rem;
+    font-weight: 500;
+    padding: 30px;
+    opacity: 0.9;
+}
+    #developer img {
+        width: 180px;
+        height: 180px;
+        border: hidden;
+        border-radius: 10px;
+    }
+    #developer p{
+        margin-top: 40px;
+        margin-left: 56px;
+    }

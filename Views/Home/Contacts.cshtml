@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Контакти";
+}
+<head>
+    <link rel="stylesheet" href="~/css/home-Contacts.css" asp-append-version="true" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://shifton.com/static/favicons/favicon-16x16.png">
+</head>
+<body>
+    <section id="contact" class="py-7">
+        <div id="container">
+            <div class="contact-content flex">
+                <div class="contact-left">
+                    <form action="https://formsubmit.co/preslavap20@gmail.com" method="POST" class="form-contact">
+
+                        <input type="hidden" name="_next" value="https://preslava-p.github.io/Home/Form-Succsess-Page.cshtml">
+
+                        <label class="labels" for="fname">Име и фамилия:</label>
+                        <input id="name" name="name" type="text" class="form-control" placeholder="Въведете името и фамилията си тук..." required>
+
+                        <label class="labels" for="email">Имейл адрес: </label>
+                        <input id="email" name="email" type="text" class="form-control" placeholder="Въведете email-а си тук..." required>
+
+                        <label class="labels" for="question">Вашият въпрос: </label>
+                        <input id="message" name="message" type="text" class="form-control" placeholder="Задай въпроса си тук..." required>
+
+                        <div class="button">
+                            <input type="submit" class="btn-submit btn" value="Изпрати">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="developers">
+                <div id="text">
+                    <h4>Свържете се с мен</h4>
+                    <h6>Shifton е многофункционално решение за планиране и управление на служителите. 
+                        Модерният свят е свързан с мобилността. Shifton е облачна система, 
+                        достъпна навсякъде с достъп до интернет, на всяко устройство, 24/7.
+                    </h6>
+                </div>
+
+                <div class="our-developers">
+                    <div id="developer">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ana-de-armas-1658392455.jpg?crop=1.00xw:0.743xh;0,0.0433xh&resize=640:*" alt="Picture 1" />
+                        <p>
+                            Преслава Петрова<br />
+                            тел: 0877 114 505 <br />
+                            preslavap20@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

@@ -1,0 +1,74 @@
+﻿@using ShiftON.Data;
+@using Microsoft.AspNetCore.Identity;
+@inject UserManager<Customer> userManager;
+@inject SignInManager<Customer> signInManager;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ShiftON</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ShiftON.styles.css" asp-append-version="true" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://shifton.com/static/favicons/favicon-16x16.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <img src="./Pictures/icon1.jpg" alt="" /> <span>ShiftON</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <br />
+            <br />
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li></li>
+                    <li></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Начална страница</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Contacts">Контакти</a>
+                    </li>
+                    @if (signInManager.IsSignedIn(User))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="VacationRequests" asp-action="Index">Заявки за почивни дни</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Schedules" asp-action="Index">Графици</a>
+                        </li>
+                        if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Shifts" asp-action="Index">Смени</a>
+                            </li>
+                        }
+                    }
+                </ul>
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-white">
+        
+        <div class="container text-center" style="font-weight: bold;">
+            &copy; 2023 - <span style="font-family: Magneto">"ShiftON"</span>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
